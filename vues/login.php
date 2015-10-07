@@ -6,7 +6,7 @@ include('./header.php');
     <div class="row">
         <div class="col-md-4 col-md-offset-4" style="margin-top:15%; padding:0 80px;">
             <form>
-                <h1 style="color:#FFF">Login Form</h1>
+                <h1 style="color:#FFF;text-align:center;">Livre Audio</h1>
                 <div style="padding:15px;">
                     <input type="text" class="form-control" placeholder="Username" required="" />
                 </div>
