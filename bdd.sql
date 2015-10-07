@@ -8,7 +8,11 @@
 -- Version de PHP :  5.6.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+<<<<<<< HEAD
 SET time_zone = "+00:00";
+=======
+SET time_zone = "00:00";
+>>>>>>> T4GAD4
 
 --
 -- Base de données :  `livreaudio`
