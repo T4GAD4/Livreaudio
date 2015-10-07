@@ -1,7 +1,7 @@
 Options +FollowSymlinks
 RewriteEngine On
 
-RewriteRule ^$ controler.php [L]
+RewriteRule ^$ vues/login.php [L]
 RewriteRule ^([a-zA-Z0-9_-]+)/([0-9_-]+)$ controler.php?act=$1&id=$2 [L]
 RewriteRule ^([a-zA-Z0-9_-]+)/([0-9_-]+)/$ controler.php?act=$1&id=$2 [L]
 RewriteRule ^([a-zA-Z0-9_-]+)$ controler.php?act=$1 [L]
