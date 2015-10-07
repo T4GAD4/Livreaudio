@@ -2,7 +2,7 @@
 include('./header.php'); 
 ?>
 
-<body style="background:url('./../assets/images/background-login.jpg') 50% 50% no-repeat;">
+<body style="background:url('./assets/images/background-login.jpg') 50% 50% no-repeat;">
     <div class="row">
         <div class="col-md-4 col-md-offset-4" style="margin-top:15%; padding:0 80px;">
             <form>
