@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="fr">
 
 <!-- EPSI - I4 2015/2016 -->

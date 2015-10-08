@@ -1,3 +1,4 @@
+
 body{
     overflow-x:hidden;
 }
@@ -35,4 +36,21 @@ h2 {
 
 .info {
     font-size:0.8em;
+}
+
+
+
+.menu {
+    background: #eee;
+    height: 100%;
+    position: absolute;
+}
+
+li {
+    list-style-type:none;
+    padding: 10px;
+}
+
+.pagination {
+    float: right;
 }
