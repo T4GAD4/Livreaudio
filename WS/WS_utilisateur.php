@@ -19,6 +19,17 @@ class WS_utilisateur extends WS_WebService
         
     }
     
+<<<<<<< HEAD
+    public function doGet($id)
+    {
+        $query = "SELECT * FROM utilisateur WHERE id = ".$id;
+        
+        if($result = $this->mysqli->query($query,MYSQLI_USE_RESULT)){
+            while($obj = $result->fetch_object()){ 
+                var_dump($obj);
+            }
+        }
+=======
     public function doGet() {
         
         if(!isset($_REQUEST['option'])){
@@ -38,12 +49,18 @@ class WS_utilisateur extends WS_WebService
             }
         }
         echo $this->json($utilisateurs);
+>>>>>>> origin/master
     }
     
     
     
 }
 
+<<<<<<< HEAD
+//$utilisateur = new WS_utilisateur();
+//$utilisateur->doGet();
+=======
+>>>>>>> origin/master
 
 
 
