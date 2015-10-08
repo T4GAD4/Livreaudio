@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.4.9
+-- version 4.1.14
 -- http://www.phpmyadmin.net
 --
--- Client :  localhost
--- Généré le :  Mer 07 Octobre 2015 à 16:28
--- Version du serveur :  5.5.42
--- Version de PHP :  5.6.10
+-- Client :  127.0.0.1
+-- Généré le :  Jeu 08 Octobre 2015 à 13:39
+-- Version du serveur :  5.6.17
+-- Version de PHP :  5.5.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,10 +17,10 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Structure de la table `Etat`
+-- Structure de la table `etat`
 --
 
-CREATE TABLE `Etat` (
+CREATE TABLE IF NOT EXISTS `etat` (
   `idUser` int(11) NOT NULL,
   `idLivre` int(11) NOT NULL,
   `etat` int(11) NOT NULL,
@@ -31,62 +31,48 @@ CREATE TABLE `Etat` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `Livre`
+-- Structure de la table `livre`
 --
 
-CREATE TABLE `Livre` (
-  `idLivre` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `livre` (
+  `idLivre` int(11) NOT NULL AUTO_INCREMENT,
   `titre` varchar(255) NOT NULL,
   `auteur` varchar(255) NOT NULL,
   `couverture` varchar(255) NOT NULL,
   `description` text NOT NULL,
-  `éditeur` varchar(255) NOT NULL,
+  `editeur` varchar(255) NOT NULL,
   `date` date NOT NULL,
   `format` varchar(255) NOT NULL,
-  `emplacement` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `emplacement` varchar(255) NOT NULL,
+  PRIMARY KEY (`idLivre`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+
+--
+-- Contenu de la table `livre`
+--
+
+INSERT INTO `livre` (`idLivre`, `titre`, `auteur`, `couverture`, `description`, `editeur`, `date`, `format`, `emplacement`) VALUES
+(1, 'ta mere', 'mon pere', 'nkkjkjk', 'bkjbkbjkbkjbkjbjbj hbj kj ', 'jk bjkbkjbjk kk', '2015-10-07', 'mp3', 'djznndkza'),
+(2, 'ta mere', 'mon pere', 'nkkjkjk', 'bkjbkbjkbkjbkjbjbj hbj kj ', 'jk bjkbkjbjk kk', '2015-10-07', 'mp3', 'djznndkza');
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `User`
+-- Structure de la table `user`
 --
 
-CREATE TABLE `User` (
-  `idUser` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `user` (
+  `idUser` int(11) NOT NULL AUTO_INCREMENT,
   `nom` varchar(255) NOT NULL,
-  `prénom` varchar(255) NOT NULL,
+  `prenom` varchar(255) NOT NULL,
   `mail` varchar(255) NOT NULL,
-  `mdp` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `mdp` varchar(255) NOT NULL,
+  PRIMARY KEY (`idUser`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
 --
--- Index pour les tables exportées
+-- Contenu de la table `user`
 --
 
---
--- Index pour la table `Livre`
---
-ALTER TABLE `Livre`
-  ADD PRIMARY KEY (`idLivre`);
-
---
--- Index pour la table `User`
---
-ALTER TABLE `User`
-  ADD PRIMARY KEY (`idUser`);
-
---
--- AUTO_INCREMENT pour les tables exportées
---
-
---
--- AUTO_INCREMENT pour la table `Livre`
---
-ALTER TABLE `Livre`
-  MODIFY `idLivre` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT pour la table `User`
---
-ALTER TABLE `User`
-  MODIFY `idUser` int(11) NOT NULL AUTO_INCREMENT;
+INSERT INTO `user` (`idUser`, `nom`, `prenom`, `mail`, `mdp`) VALUES
+(1, 'capi', 'aurelien', 'capi.aurelien@gmail.com', '11f8114ae7af9eb95f365e33205ef0bb1941451f4fe84282437b820a1e70784c');
