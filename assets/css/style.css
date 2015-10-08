@@ -3,9 +3,6 @@ body{
     overflow-x:hidden;
 }
 
-header{
-    
-}
 header {
     background-color: #1F4788;
     color: #FFF;
@@ -27,7 +24,9 @@ h2 {
     min-height:100%;
     margin:0;
 }
-
+li {
+    cursor: pointer;
+}
 .couverture {
     float:left;
     padding:15px;
@@ -53,4 +52,23 @@ li {
 
 .pagination {
     float: right;
+}
+
+.rating {
+   direction: rtl;
+   margin-top: -30px;
+   margin-right: 30px;
+}
+.rating a {
+   color: #aaa;
+   text-decoration: none;
+   font-size: 1em;
+   transition: color .4s;
+}
+.rating a:hover,
+.rating a:focus,
+.rating a:hover ~ a,
+.rating a:focus ~ a {
+   color: orange;
+   cursor: pointer;
 }
