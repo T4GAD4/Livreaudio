@@ -37,7 +37,30 @@ li {
     font-size:0.8em;
 }
 
+.rating {
+   direction: rtl;
+   margin-top: -30px;
+   margin-right: 30px;
+}
+.rating a {
+   color: #aaa;
+   text-decoration: none;
+   font-size: 1em;
+   transition: color .4s;
+}
+.rating a:hover,
+.rating a:focus,
+.rating a:hover ~ a,
+.rating a:focus ~ a {
+   color: orange;
+   cursor: pointer;
+}
 
+.livre{
+    cursor:pointer;
+    padding: 0 15px;
+
+}
 
 .menu {
     background: #eee;
