@@ -4,7 +4,7 @@ class WS_WebService
 {
     private $host = "localhost";
     private $user = "root";
-    private $password = "";
+    private $password = "root";
     private $database = "livreaudio";
     protected $mysqli;
     

@@ -1,3 +1,4 @@
+
 body{
     overflow-x:hidden;
 }
@@ -59,4 +60,20 @@ h2 {
 .livre{
     cursor:pointer;
     padding: 0 15px;
+
+}
+
+.menu {
+    background: #eee;
+    height: 100%;
+    position: absolute;
+}
+
+li {
+    list-style-type:none;
+    padding: 10px;
+}
+
+.pagination {
+    float: right;
 }
