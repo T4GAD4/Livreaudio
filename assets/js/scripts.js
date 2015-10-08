@@ -1,10 +1,3 @@
-
-$(document).ready(function () {
-    
-});
-
-
-
 function testConnexion() {
     $.ajax({
         url: "utilisateur",

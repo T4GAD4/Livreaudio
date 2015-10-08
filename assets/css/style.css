@@ -1,6 +1,5 @@
 body{
     overflow-x:hidden;
-    background:url('../images/background-login.jpg') 50% 50% no-repeat;
 }
 
 header{
@@ -17,6 +16,15 @@ h1 {
 
 h2 {
     text-align: center;
+}
+
+#login{
+    background:url('../images/background-login.jpg') 100% 100% no-repeat;
+    background-size: cover;
+    position:absolute;
+    width:100%;
+    min-height:100%;
+    margin:0;
 }
 
 .couverture {
