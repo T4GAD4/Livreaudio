@@ -30,6 +30,8 @@ h2 {
 }
 li {
     cursor: pointer;
+    list-style-type: none;
+    margin: 10px;
 }
 .couverture {
     float:left;
