@@ -10,6 +10,7 @@ function testConnexion() {
         url: "utilisateur",
         method: "GET"
     }).success(function (data) {
+        console.log(data);
         data = JSON.parse(data);
         AjaxView(data.page);
     });
