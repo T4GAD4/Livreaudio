@@ -1,8 +1,17 @@
 <?php
 
-include('WS_WebService.php');
-
 class WS_livre extends WS_WebService {
+    
+    
+    public $idLivre;
+    public $auteur;
+    public $couverture;
+    public $description;
+    public $editeur;
+    public $date;
+    public $format;
+    public $emplacement;
+    
 
     function __construct() {
         parent::__construct();
@@ -12,23 +21,27 @@ class WS_livre extends WS_WebService {
         
     }
 
-    public function doGet($id = 0) {
+    public function doGet() {
         
-        if($id == 0){        
+        if(!isset($_REQUEST['option'])){
             $query = "SELECT * FROM livre";
         }else{
-            $query = "SELECT * FROM livre WHERE id = ".$id;
+            $query = "SELECT * FROM livre WHERE idLivre = ".intval($_REQUEST['option']);
         }
-        
+        $livres = Array();
         if ($result = $this->mysqli->query($query, MYSQLI_USE_RESULT)) {
-            $livres = Array();
             while ($obj = $result->fetch_object()) {
                 $livre = new StdClass();
-                $livre->titre = $obj->titre;
+                $livre->idLivre = $obj->idLivre;
+                $livre->auteur = $obj->auteur;
+                $livre->couverture = $obj->couverture;
+                $livre->description = $obj->description;
+                $livre->editeur = $obj->editeur;
+                $livre->description = $obj->description;
                 array_push($livres, $livre);
             }
         }
-        $this->response($this->json($livres), 200);
+        echo $this->json($livres);
     }
 
 }

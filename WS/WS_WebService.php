@@ -18,7 +18,7 @@ class WS_WebService
 
     }
      
-    private function doGet($id){
+    private function doGet(){
         if($this->get_request_method() != "GET"){ $this->response('',406); }
     }
      
@@ -34,7 +34,7 @@ class WS_WebService
         if($this->get_request_method() != "DELETE"){ $this->response('',406); }
     }
     
-    private function json($data){
+    protected function json($data){
         if(is_array($data)){
           return json_encode($data);
         }
