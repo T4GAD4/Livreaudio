@@ -16,15 +16,15 @@ and open the template in the editor.
         </header>
         <div class="row">
             <nav>
-                <div class="col-md-2">
+                <div class="col-md-2 menu">
                     <ul>
-                        <li><i class="fa fa-book"></i>Livres audio</li>
-                        <li><i class="fa fa-user"></i>Utilisateur</li>
+                        <li><a href="#"><i class="fa fa-book"></i> Livres audio</a></li>
+                        <li><a href="#"><i class="fa fa-user"></i> Utilisateur</a></li>
                     </ul>
                 </div>
             </nav>
             <content>
-                <div class="col-md-10">
+                <div class="col-md-10 col-md-offset-2">
                     <h2>L'ensemble de nos livres audio</h2>
                     <div class="row" style="padding:15px;">
                         <div class="col-md-6">
@@ -136,6 +136,13 @@ and open the template in the editor.
                             <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi architecto mollitia officia blanditiis, rem eum numquam distinctio eaque iure dicta ipsa animi tenetur totam culpa accusantium tempora, ipsum illum dignissimos!</p>
                         </div>
                     </div>
+                    <ul class="pagination">
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                    </ul>
                 </div>
             </content>
         </div> 
