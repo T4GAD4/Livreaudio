@@ -1,3 +1,29 @@
 body{
     overflow-x:hidden;
 }
+
+header{
+    
+}
+header {
+    background-color: #1F4788;
+    color: #FFF;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+.couverture {
+    float:left;
+    padding:15px;
+    max-height: 200px;
+}
+
+.info {
+    font-size:0.8em;
+}
