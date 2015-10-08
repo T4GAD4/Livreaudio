@@ -1,16 +1,37 @@
 
 $(document).ready(function () {
     
-
 });
 
-function AjaxVue(nomVue,block){
-    $.post("")
-    .success(function(data){
-        console.log(JSON.parse(data.result));
 
-        //Si on est connecte, on affiche le header connecté
-        //Si on est pas connecte, on affiche le header déconnecté
+
+function testConnexion() {
+    $.ajax({
+        url: "utilisateur",
+        method: "GET"
+    }).success(function (data) {
+        data = JSON.parse(data);
+        AjaxView(data.page);
     });
-    
+}
+
+function AjaxView(vue){
+     $("#header").empty();
+     $("#menu").empty();
+     $("#content").empty();
+    if(vue != "login.php"){
+        $("#header").load("vues/header.php");
+        $("#menu").load("vues/menu.php");
+    }
+    $("#content").load("vues/"+vue);
+}
+
+function deconnexion(){
+    $.ajax({
+        url: "utilisateur",
+        method: "PUT"
+    }).success(function (data) {
+        data = JSON.parse(data);
+        AjaxView(data.page);
+    });
 }

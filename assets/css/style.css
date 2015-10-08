@@ -1,5 +1,6 @@
 body{
     overflow-x:hidden;
+    background:url('../images/background-login.jpg') 50% 50% no-repeat;
 }
 
 header{
