@@ -3,9 +3,6 @@ body{
     overflow-x:hidden;
 }
 
-header{
-    
-}
 header {
     background-color: #1F4788;
     color: #FFF;
@@ -31,11 +28,16 @@ h2 {
     min-height:100%;
     margin:0;
 }
-
+li {
+    cursor: pointer;
+    list-style-type: none;
+    margin: 10px;
+}
 .couverture {
     float:left;
     padding:15px;
     max-height: 200px;
+    max-width: 200px;
 }
 
 .info {
@@ -60,11 +62,19 @@ h2 {
    color: orange;
    cursor: pointer;
 }
+<<<<<<< HEAD
 
 .livre{
     cursor:pointer;
     padding: 0 15px;
 
+=======
+
+.livre{
+    cursor:pointer;
+    padding: 0 15px;
+
+>>>>>>> origin/master
 }
 
 .menu {
@@ -80,4 +90,23 @@ li {
 
 .pagination {
     float: right;
+}
+
+.rating {
+   direction: rtl;
+   margin-top: -30px;
+   margin-right: 30px;
+}
+.rating a {
+   color: #aaa;
+   text-decoration: none;
+   font-size: 1em;
+   transition: color .4s;
+}
+.rating a:hover,
+.rating a:focus,
+.rating a:hover ~ a,
+.rating a:focus ~ a {
+   color: orange;
+   cursor: pointer;
 }

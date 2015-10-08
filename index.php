@@ -26,8 +26,10 @@
 </head>
 <body>
     <div id="header"></div>
-    <div id="menu"></div>
-    <div id="content"></div>    
+    <div class="row">
+        <div id="menu"></div>
+        <div id="content"></div> 
+    </div>
 </body>
 </html>
 
