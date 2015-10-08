@@ -16,28 +16,49 @@ class WS_utilisateur extends WS_WebService
  
     public function doPut()
     {
+        unset($_SESSION['utilisateur']);
+        $result = new stdClass();
+        $result->page = "login.php";
         
+        echo json_encode($result);
     }
-
-    public function doGet() {
-        
-        if(!isset($_REQUEST['option'])){
-            $query = "SELECT * FROM user";
+ 
+    public function doPost()
+    {
+        if($_REQUEST['mail']){
+            $query = "SELECT * FROM user WHERE mail = '".$_REQUEST['mail'] ."' AND mdp ='".hash('sha256',$_REQUEST['mdp'])."'";
         }else{
-            $query = "SELECT * FROM user WHERE idUtilisateur = ".intval($_REQUEST['option']);
+            $query = "SELECT * FROM user WHERE idUser = ".$_REQUEST['id'];
         }
         $utilisateurs = Array();
         if ($result = $this->mysqli->query($query, MYSQLI_USE_RESULT)) {
             while ($obj = $result->fetch_object()) {
+                $utilisateur = new stdClass();
                 $utilisateur->idUser = $obj->idUser;
                 $utilisateur->nom = $obj->nom;
                 $utilisateur->prenom = $obj->prenom;
                 $utilisateur->mail = $obj->mail;
                 $utilisateur->mdp = $obj->mdp;
-                array_push($utilisateurs, $this);
+                array_push($utilisateurs, $utilisateur);
             }
         }
-        echo $this->json($utilisateurs);
+        if($_REQUEST['mail'] && sizeof($utilisateurs) != 0){
+            $_SESSION['utilisateur'] = $utilisateur;
+        }
+        
+    }
+
+    public function doGet() {
+        $result = new stdClass();
+        $result->resultat = false;
+        $result->page = "login.php";
+        
+        if(isset($_SESSION['utilisateur'])){
+            $result->resultat = true;
+            $result->page = "livre.php";
+        }
+        
+        echo json_encode($result);   
     }
     
     public function doDelete() {

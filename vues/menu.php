@@ -1,8 +1,11 @@
-<?php
+<div class="row">
+    <nav>
+        <div class="col-md-2">
+            <ul>
+                <li><i class="fa fa-book"></i>Livres audio</li>
+                <li onclick="deconnexion()"><i class="fa fa-user"></i>Utilisateur</li>
+            </ul>
+        </div>
+    </nav>
 
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
+</div> 
