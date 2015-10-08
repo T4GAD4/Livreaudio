@@ -18,24 +18,13 @@ class WS_utilisateur extends WS_WebService
     {
         
     }
-    
-<<<<<<< HEAD
-    public function doGet($id)
-    {
-        $query = "SELECT * FROM utilisateur WHERE id = ".$id;
-        
-        if($result = $this->mysqli->query($query,MYSQLI_USE_RESULT)){
-            while($obj = $result->fetch_object()){ 
-                var_dump($obj);
-            }
-        }
-=======
+
     public function doGet() {
         
         if(!isset($_REQUEST['option'])){
-            $query = "SELECT * FROM utilisateur";
+            $query = "SELECT * FROM user";
         }else{
-            $query = "SELECT * FROM utilisateur WHERE idUtilisateur = ".intval($_REQUEST['option']);
+            $query = "SELECT * FROM user WHERE idUtilisateur = ".intval($_REQUEST['option']);
         }
         $utilisateurs = Array();
         if ($result = $this->mysqli->query($query, MYSQLI_USE_RESULT)) {
@@ -49,19 +38,12 @@ class WS_utilisateur extends WS_WebService
             }
         }
         echo $this->json($utilisateurs);
->>>>>>> origin/master
     }
     
-    
-    
+    public function doDelete() {
+        $query = "DELETE * FROM user WHERE idUtilisateur = ".intval($_REQUEST['option']);
+        $this->mysqli->query($query);
+    }
+     
 }
-
-<<<<<<< HEAD
-//$utilisateur = new WS_utilisateur();
-//$utilisateur->doGet();
-=======
->>>>>>> origin/master
-
-
-
 ?>
