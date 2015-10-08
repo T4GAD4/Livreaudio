@@ -34,7 +34,7 @@ class WS_WebService
         if($this->get_request_method() != "DELETE"){ $this->response('',406); }
     }
     
-    private function json($data){
+    protected function json($data){
         if(is_array($data)){
           return json_encode($data);
         }
