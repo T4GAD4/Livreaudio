@@ -55,11 +55,19 @@ li {
    color: orange;
    cursor: pointer;
 }
+<<<<<<< HEAD
 
 .livre{
     cursor:pointer;
     padding: 0 15px;
 
+=======
+
+.livre{
+    cursor:pointer;
+    padding: 0 15px;
+
+>>>>>>> origin/master
 }
 
 .menu {
