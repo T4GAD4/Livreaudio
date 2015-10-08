@@ -6,7 +6,7 @@ RewriteCond $1 !^(WS)
 
 
 RewriteRule ^$ vues/login.php [L]
-RewriteRule ^([a-zA-Z0-9_-]+)/([0-9_-]+)$ controler.php?action=$1&id=$2 [L]
-RewriteRule ^([a-zA-Z0-9_-]+)/([0-9_-]+)/$ controler.php?action=$1&id=$2 [L]
+RewriteRule ^([a-zA-Z0-9_-]+)/([0-9_-]+)$ controler.php?action=$1&option=$2 [L]
+RewriteRule ^([a-zA-Z0-9_-]+)/([0-9_-]+)/$ controler.php?action=$1&option=$2 [L]
 RewriteRule ^([a-zA-Z0-9_-]+)$ controler.php?action=$1 [L]
 RewriteRule ^([a-zA-Z0-9_-]+)/$ controler.php?action=$1 [L]
