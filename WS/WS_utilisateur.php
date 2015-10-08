@@ -11,13 +11,27 @@ class WS_utilisateur extends WS_WebService
  
     public function doPut()
     {
-        var_dump($mysqli);
+        
+    }
+    
+    public function doGet($id)
+    {
+        $query = "SELECT * FROM utilisateur WHERE id = ".$id;
+        
+        if($result = $this->mysqli->query($query,MYSQLI_USE_RESULT)){
+            while($obj = $result->fetch_object()){ 
+                var_dump($obj);
+            }
+        }
     }
     
     
     
 }
 
-$utilisateur = new WS_utilisateur();
+//$utilisateur = new WS_utilisateur();
+//$utilisateur->doGet();
+
+
 
 ?>
