@@ -18,7 +18,7 @@ class WS_WebService
 
     }
      
-    private function doGet($id){
+    private function doGet(){
         if($this->get_request_method() != "GET"){ $this->response('',406); }
     }
      
