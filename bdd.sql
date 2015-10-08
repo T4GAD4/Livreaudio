@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Jeu 08 Octobre 2015 à 13:39
+-- Généré le :  Jeu 08 Octobre 2015 à 15:56
 -- Version du serveur :  5.6.17
 -- Version de PHP :  5.5.12
 
@@ -45,15 +45,21 @@ CREATE TABLE IF NOT EXISTS `livre` (
   `format` varchar(255) NOT NULL,
   `emplacement` varchar(255) NOT NULL,
   PRIMARY KEY (`idLivre`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9 ;
 
 --
 -- Contenu de la table `livre`
 --
 
 INSERT INTO `livre` (`idLivre`, `titre`, `auteur`, `couverture`, `description`, `editeur`, `date`, `format`, `emplacement`) VALUES
-(1, 'ta mere', 'mon pere', 'nkkjkjk', 'bkjbkbjkbkjbkjbjbj hbj kj ', 'jk bjkbkjbjk kk', '2015-10-07', 'mp3', 'djznndkza'),
-(2, 'ta mere', 'mon pere', 'nkkjkjk', 'bkjbkbjkbkjbkjbjbj hbj kj ', 'jk bjkbkjbjk kk', '2015-10-07', 'mp3', 'djznndkza');
+(1, 'Donjon de Naheulbeuk 1', 'Auteur', './assets/images/naheulbeuk.jpg', 'Desxcription dz d a dza ,d za d az d,naz nd az d, azn dzabdbzadna dbcgbs bkhlnd qbchnc bzbazn dbzdzav db ', 'Editeur', '2015-10-07', 'mp3', 'donjon-de-naheulbeuk01.mp3'),
+(2, 'Donjon de Naheulbeuk  2', 'Auteur', './assets/images/naheulbeuk.jpg', 'Description', 'Editeur', '2015-10-07', 'mp3', 'donjon-de-naheulbeuk02.mp3'),
+(3, 'Donjon de Naheulbeuk  3', 'Auteur', './assets/images/naheulbeuk.jpg', 'bkjbkbjkbkjbkjbjbj hbj kj ', 'Editeur', '2015-10-07', 'mp3', 'donjon-de-naheulbeuk03.mp3'),
+(4, 'Donjon de Naheulbeuk  4', 'Auteur', './assets/images/naheulbeuk.jpg', 'bkjbkbjkbkjbkjbjbj hbj kj ', 'Editeur', '2015-10-07', 'mp3', 'donjon-de-naheulbeuk04.mp3'),
+(5, 'Donjon de Naheulbeuk  5', 'Auteur', './assets/images/naheulbeuk.jpg', 'bkjbkbjkbkjbkjbjbj hbj kj ', 'Editeur', '2015-10-07', 'mp3', 'donjon-de-naheulbeuk05.mp3'),
+(6, 'Donjon de Naheulbeuk  6', 'Auteur', './assets/images/naheulbeuk.jpg', 'bkjbkbjkbkjbkjbjbj hbj kj ', 'Editeur', '2015-10-07', 'mp3', 'donjon-de-naheulbeuk06.mp3'),
+(7, 'Donjon de Naheulbeuk  7', 'Auteur', './assets/images/naheulbeuk.jpg', 'bkjbkbjkbkjbkjbjbj hbj kj ', 'Editeur', '2015-10-07', 'mp3', 'donjon-de-naheulbeuk07.mp3'),
+(8, 'Donjon de Naheulbeuk  8', 'Auteur', './assets/images/naheulbeuk.jpg', 'bkjbkbjkbkjbkjbjbj hbj kj ', 'Editeur', '2015-10-07', 'mp3', 'donjon-de-naheulbeuk08.mp3');
 
 -- --------------------------------------------------------
 
