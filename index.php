@@ -27,8 +27,7 @@
 <body>
     <div id="header"></div>
     <div id="menu"></div>
-    <div id="content"></div>
-    
+    <div id="content"></div>    
 </body>
 </html>
 
