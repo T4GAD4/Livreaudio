@@ -6,7 +6,7 @@ class WS_WebService
     private $user = "root";
     private $password = "";
     private $database = "livreaudio";
-    private $mysqli;
+    protected $mysqli;
     
     function __construct() {
         
@@ -18,24 +18,20 @@ class WS_WebService
 
     }
      
-    private function doGet(){
+    private function doGet($id){
         if($this->get_request_method() != "GET"){ $this->response('',406); }
-        return false;
     }
      
     private function doPost(){
         if($this->get_request_method() != "POST"){ $this->response('',406); }
-        return false;
     }
      
     private function doPut(){
         if($this->get_request_method() != "PUT"){ $this->response('',406); }
-        return false;
     }
      
     private function doDelete(){
         if($this->get_request_method() != "DELETE"){ $this->response('',406); }
-        return false;
     }
     
     private function json($data){
