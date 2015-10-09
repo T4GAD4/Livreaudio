@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Jeu 08 Octobre 2015 à 15:56
+-- Généré le :  Ven 09 Octobre 2015 à 08:37
 -- Version du serveur :  5.6.17
 -- Version de PHP :  5.5.12
 
@@ -21,12 +21,28 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE IF NOT EXISTS `etat` (
+  `idEtat` int(11) NOT NULL AUTO_INCREMENT,
   `idUser` int(11) NOT NULL,
   `idLivre` int(11) NOT NULL,
   `etat` int(11) NOT NULL,
-  `time` time NOT NULL,
-  `note` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `time` int(11) NOT NULL,
+  `note` int(11) DEFAULT NULL,
+  PRIMARY KEY (`idEtat`),
+  KEY `idUser` (`idUser`),
+  KEY `idLivre` (`idLivre`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9 ;
+
+--
+-- Contenu de la table `etat`
+--
+
+INSERT INTO `etat` (`idEtat`, `idUser`, `idLivre`, `etat`, `time`, `note`) VALUES
+(3, 1, 1, 1, 0, NULL),
+(4, 1, 2, 1, 0, NULL),
+(5, 1, 3, 1, 0, NULL),
+(6, 1, 8, 1, 0, NULL),
+(7, 1, 5, 1, 0, NULL),
+(8, 1, 4, 1, 0, NULL);
 
 -- --------------------------------------------------------
 
@@ -82,3 +98,14 @@ CREATE TABLE IF NOT EXISTS `user` (
 
 INSERT INTO `user` (`idUser`, `nom`, `prenom`, `mail`, `mdp`) VALUES
 (1, 'capi', 'aurelien', 'capi.aurelien@gmail.com', '11f8114ae7af9eb95f365e33205ef0bb1941451f4fe84282437b820a1e70784c');
+
+--
+-- Contraintes pour les tables exportées
+--
+
+--
+-- Contraintes pour la table `etat`
+--
+ALTER TABLE `etat`
+  ADD CONSTRAINT `etat_ibfk_1` FOREIGN KEY (`idUser`) REFERENCES `user` (`idUser`),
+  ADD CONSTRAINT `etat_ibfk_2` FOREIGN KEY (`idLivre`) REFERENCES `livre` (`idLivre`);
