@@ -1,6 +1,10 @@
 function testConnexion() {
     AjaxCharge("utilisateur", "GET");
 }
+$(document).ready(function(){
+    setInterval(function(){SaveTime();},10000);
+});
+
 
 function AjaxView(vue) {
     $("#header").empty();
@@ -130,7 +134,6 @@ function SaveTime() {
         if (time < 0) {
             time = 0;
         }
-        console.log($('audio')[0].dataset.idlivre);
 
         data = {};
         if (time > $('audio')[0].duration - 3) {
@@ -192,6 +195,7 @@ function AfficheLivres(data) {
 }
 
 function deconnexion() {
+    $('audio')[0].remove();
     $.ajax({
         url: "utilisateur",
         method: "LogOut"
