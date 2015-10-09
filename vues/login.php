@@ -1,7 +1,7 @@
 <div class="row" id="login">
     <div class="col-md-4 col-md-offset-4" style="margin-top:15%; padding:0 80px;">
         <form id="connexion">
-            <h1 style="color:#FFF;text-align:center;">Livre Audio</h1>
+            <h2 style="color:#FFF;text-align:center;">Livre Audio</h2>
             <div style="padding:15px;">
                 <input type="email" class="form-control" placeholder="Username" name="mail" required="" value="test@test.fr" />
             </div>
