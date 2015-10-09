@@ -178,3 +178,8 @@ audio{
 ul {
     float: right;
 }
+
+#research{
+    width : 50%;
+    margin : 0 auto;
+}

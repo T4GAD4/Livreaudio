@@ -21,6 +21,8 @@
     
     <script type="text/javascript" src="assets/js/jquery.js"></script>
     <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/js/livres.js"></script>
+    <script type="text/javascript" src="assets/js/user.js"></script>
     <script type="text/javascript" src="assets/js/scripts.js"></script>
     
 </head>
@@ -34,6 +36,7 @@
     <div id="header"></div>
     <div class="row" id="row-login">
         <div id="menu"></div>
+        <span id="audio"></span>
         <div id="content"></div> 
     </div>
 </body>
