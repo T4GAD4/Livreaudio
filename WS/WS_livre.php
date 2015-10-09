@@ -41,6 +41,23 @@ class WS_livre extends WS_WebService {
                 array_push($livres, $livre);
             }
         }
+        
+        mysqli_free_result($result);
+        foreach($livres as $livre){
+            $utilisateur = $_SESSION['utilisateur'];
+            $query = "SELECT * FROM etat WHERE idUser = ".$utilisateur->idUser." AND idLivre = ".$livre->idLivre;
+
+            if ($resultat = $this->mysqli->query($query, MYSQLI_USE_RESULT)) {
+                while ($obj = $resultat->fetch_object()) {
+                    $etat = new Stdclass();
+                    $etat->time = $obj->time;
+                    $etat->note = $obj->note;
+                    $etat->etat = $obj->etat;
+                    $livre->infos = $etat;
+                } 
+            }
+        }
+        
         echo $this->json($livres);
     }
 

@@ -23,6 +23,9 @@ class WS_etat extends WS_WebService {
                 } 
                 echo json_encode($etat);
             }   
+        }else if(isset($_REQUEST['fonction']) && $_REQUEST['fonction'] == "notation"){
+            $query2 = "UPDATE `etat` SET `note`=".intval($_REQUEST['note'])." WHERE `idUser`= $utilisateur->idUser AND `idLivre`=".$_REQUEST['idLivre'];
+            $this->mysqli->query($query2);
         }else{
             $query = "SELECT * FROM etat WHERE idUser = ".$utilisateur->idUser." AND idLivre = ".$_REQUEST['idLivre'];
             $result = $this->mysqli->query($query,MYSQLI_USE_RESULT);
