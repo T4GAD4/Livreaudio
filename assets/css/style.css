@@ -9,7 +9,11 @@ header {
 }
 
 h1 {
-    text-align: center;
+    background:url(https://drscdn.500px.org/photo/110339121/m%3D2048/fe194bec0c752eb6a339e81fbc9c8c7e) 100% 35% no-repeat;
+    background-size: cover;
+    height: 400px;
+    margin: 0px;
+    padding:150px;
 }
 
 h2 {
@@ -78,8 +82,9 @@ li {
 }
 
 li {
-    list-style-type:none;
+    list-style-type: none;
     padding: 10px;
+    float: left;
 }
 
 .pagination {
@@ -161,4 +166,15 @@ audio{
 .description{
     font-size : 12px;
     padding : 6px 0;
+}
+
+.menu {
+    background-color:rgba(0,0,0,0.5);
+    position: relative;
+    bottom: 70px;
+    color: white;
+}
+
+ul {
+    float: right;
 }
