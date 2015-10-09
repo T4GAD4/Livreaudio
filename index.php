@@ -25,8 +25,14 @@
     
 </head>
 <body>
+    <!-- Loader -->
+
+    <div id="spinner">
+        <img src="assets/images/logo-wk-icon.png" />
+    </div>
+    
     <div id="header"></div>
-    <div class="row">
+    <div class="row" id="row-login">
         <div id="menu"></div>
         <div id="content"></div> 
     </div>
