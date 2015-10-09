@@ -1,5 +1,5 @@
 <nav>
-    <div class="col-md-2">
+    <div class="col-md-12 menu">
         <ul>
             <li><i class="fa fa-book"></i> Livres audio</li>
             <li><i class="fa fa-user"></i> Mon espace perso</li>
