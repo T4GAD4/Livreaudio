@@ -1,5 +1,6 @@
 <content>
-    <div class="col-md-10">
+    <div class="col-md-12">
+        <span id="audio"></span>
         <h2 id="titre"></h2>
         <div class="row" style="padding:15px;" id="liste">
         </div>
