@@ -3,10 +3,10 @@
         <form id="connexion">
             <h1 style="color:#FFF;text-align:center;">Livre Audio</h1>
             <div style="padding:15px;">
-                <input type="email" class="form-control" placeholder="Username" name="mail" required="" value="capi.aurelien@gmail.com" />
+                <input type="email" class="form-control" placeholder="Username" name="mail" required="" value="test@test.fr" />
             </div>
             <div style="padding:15px;">
-                <input type="password" class="form-control" placeholder="Password" name="mdp" required="" value="altec lansing_3" />
+                <input type="password" class="form-control" placeholder="Password" name="mdp" required="" value="test" />
             </div>
             <div style="text-align:center;">
                 <input type="submit" class="btn btn-default submit" value="Connexion"/>
