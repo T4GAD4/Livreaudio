@@ -84,6 +84,13 @@ function AfficheLivre(livre) {
             star5 = "active";
         }
     }
+    
+    var audio = "<audio controls>\n\
+<source src='./assets/livres/" + livre[0].emplacement + "' type='audio/mpeg'>\
+    Your browser does not support the audio element.\
+            </audio>";
+    
+    $('content').prepend(audio);
 
     var html = "<a class='btn btn-info' onclick='loadLivre(0)'><i class='fa fa-arrow-left'></i>Retour</a>\
         <div class='row livre-info'>\
@@ -108,12 +115,6 @@ function AfficheLivre(livre) {
             </div>\
         </div>\
         <div class='row'>\
-            <div class='col-md-12'>\
-            <audio controls>\
-              <source src='./assets/livres/" + livre[0].emplacement + "' type='audio/mpeg'>\
-            Your browser does not support the audio element.\
-            </audio>\
-            </div>\
             <input type='hidden' name='idLivre' value='" + livre[0].idLivre + "'>\
         </div>";
     $('#liste').html(html);
